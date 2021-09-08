@@ -52,7 +52,7 @@ export default function Products() {
           <Card className={classes.card}>
             <CardMedia
               className={classes.cardMedia}
-              image={product.image}
+              image={`https://source.unsplash.com/random?sig=${index}`}
               title="Image title"
               style={{ objectFit: "cover", paddingTop: "56.25%" }}
             />
@@ -61,6 +61,7 @@ export default function Products() {
                 {product.title}
               </Typography>
               <Typography>{formatAsPrice(product.price)}</Typography>
+              <Typography>In stock: {product.count}</Typography>
             </CardContent>
             <CardActions>
               <AddProductToCart product={product} />
